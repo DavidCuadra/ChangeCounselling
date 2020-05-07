@@ -1,0 +1,88 @@
+﻿@model ChangeCounselling.Data.Models.Counsellor
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Counsellor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorAddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorAddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorAddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorAddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorAddressLine3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorAddressLine3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorEmail)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorRate)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm()) {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-default" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

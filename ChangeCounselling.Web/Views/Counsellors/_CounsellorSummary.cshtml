@@ -1,0 +1,12 @@
+﻿@model ChangeCounselling.Data.Models.Counsellor
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title">@Model.CouncellorFirstName, @Model.CouncellorLastName</h3>
+    </div>
+    <div class="panell-body">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.CounsellorID }) |
+        @Html.ActionLink("Details", "Details", new { id = Model.CounsellorID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.CounsellorID })
+    </div>
+</div>

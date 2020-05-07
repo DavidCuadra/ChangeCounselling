@@ -1,0 +1,28 @@
+﻿@model IEnumerable<ChangeCounselling.Data.Models.Counsellor>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<style>
+
+    body{
+        background-color:#e6ffff; 
+    }
+    h1 {
+        text-align: center;
+    }
+
+</style>
+
+<h1><strong>Counsellors</strong></h1>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+
+@foreach(var item in Model)
+{
+    @Html.Partial("_CounsellorSummary", item)
+}
+

@@ -1,0 +1,90 @@
+﻿@model ChangeCounselling.Data.Models.Counsellor
+
+@{
+    ViewBag.Title = "Details";
+}
+
+    <h2>Details for @Html.DisplayFor(model => model.CouncellorFirstName)</h2>
+
+<div>
+    <h4>Counsellor</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.CounsellorID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CounsellorID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorLastName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorAddressLine1)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorAddressLine1)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorAddressLine2)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorAddressLine2)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorAddressLine3)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorAddressLine3)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorPhone)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorPhone)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorEmail)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorEmail)
+        </dd>
+            
+        <dt>
+            @Html.DisplayNameFor(model => model.CouncellorRate)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CouncellorRate)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CounsellorID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
