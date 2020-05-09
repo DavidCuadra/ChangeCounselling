@@ -106,21 +106,25 @@
     <Compile Include="Models\Book.cs" />
     <Compile Include="Models\Client.cs" />
     <Compile Include="Models\Counsellor.cs" />
+    <Compile Include="Models\Login.cs" />
     <Compile Include="Models\RateType.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\CounsellorDbContext.cs" />
     <Compile Include="Services\IBillData.cs" />
     <Compile Include="Services\IClientData.cs" />
     <Compile Include="Services\ICounsellorData.cs" />
+    <Compile Include="Services\ILoginData.cs" />
     <Compile Include="Services\InMemoryBookData.cs" />
     <Compile Include="Services\InMemoryClientData.cs" />
     <Compile Include="Services\InMemoryCounsellorData.cs" />
     <Compile Include="Services\IBookData.cs" />
     <Compile Include="Services\InMemoryBillData.cs" />
+    <Compile Include="Services\InMemoryLoginData.cs" />
     <Compile Include="Services\SqlBillData.cs" />
     <Compile Include="Services\SqlBookData.cs" />
     <Compile Include="Services\SqlClientData.cs" />
     <Compile Include="Services\SqlCounsellorData.cs" />
+    <Compile Include="Services\SqlLoginData.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

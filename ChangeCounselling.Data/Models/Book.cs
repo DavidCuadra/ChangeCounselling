@@ -22,9 +22,6 @@ namespace ChangeCounselling.Data.Models
 
         [Required]
         public int ClientID { get; set; }
-        public IEnumerable<SelectListItem> ClientList { get; set; }
-        //public  void ClientList();
-
 
         [Required]
         public int CounsellorID { get; set; }

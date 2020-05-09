@@ -15,7 +15,9 @@ namespace ChangeCounselling.Web.Controllers
         public BillController(IBillData db)
         {
             this.db = db;
+
         }
+
 
         // GET: Bill
         public ActionResult Index()

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Security;
 
 namespace ChangeCounselling.Web.Controllers
 {
@@ -21,7 +22,8 @@ namespace ChangeCounselling.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
-            var model = db.GetAll();
+
+           var model = db.GetAll();
             return View(model);
         }
 
@@ -55,8 +57,12 @@ namespace ChangeCounselling.Web.Controllers
         }
 
         [HttpGet]
+      
         public ActionResult Edit(int id)
         {
+
+           // return RedirectToAction("Auth", "Login");
+
             var model = db.Get(id);
             if(model == null)
             {
@@ -65,12 +71,16 @@ namespace ChangeCounselling.Web.Controllers
                 }
             }
             return View(model);
+
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Edit(Counsellor counsellor)
         {
+
+
+
             if (ModelState.IsValid)
             {
                 db.Update(counsellor);
@@ -78,6 +88,9 @@ namespace ChangeCounselling.Web.Controllers
                 return RedirectToAction("Details", new { id = counsellor.CounsellorID });
             }
             return View(counsellor);
+
+
+
         }
 
         [HttpGet]

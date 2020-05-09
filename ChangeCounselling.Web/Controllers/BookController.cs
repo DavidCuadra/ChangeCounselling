@@ -21,6 +21,7 @@ namespace ChangeCounselling.Web.Controllers
         [HttpGet]
         public ActionResult Index()
         {
+
             var model = db.GetAll();
             return View(model);
         }
@@ -39,6 +40,9 @@ namespace ChangeCounselling.Web.Controllers
         // GET: Book/Create
         public ActionResult Create()
         {
+            var db = new SqlClientData(new CounsellorDbContext());
+            var result = db.GetAll().ToList();
+            ViewBag.data = result;
             return View();
         }
 

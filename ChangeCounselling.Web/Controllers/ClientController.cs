@@ -41,20 +41,16 @@ namespace ChangeCounselling.Web.Controllers
 
         public ActionResult Create()
         {
-            Client model = new Client
-            {
-                ClientList = new SelectList(db.Clients, "ClientID", "ClientFirstName")
-            };
-            return View(model);
+                       return View();
         }
 
         [HttpPost]
         [ValidateAntiForgeryToken]
         public ActionResult Create(Client client)
         {
-            if(!ModelState.IsValid)
+            if(ModelState.IsValid)
             {
-                client.ClientList = new SelectList(db.Clients, "ID", "Name");
+               
                 db.Add(client);
                 return RedirectToAction("Details", new { id = client.ClientID });
             }

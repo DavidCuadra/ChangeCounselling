@@ -18,7 +18,7 @@ namespace ChangeCounselling.Data.Services
             this.db = db;
         }
 
-        public string Clients { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+     
 
         public void Add(Client client)
         {
@@ -26,10 +26,6 @@ namespace ChangeCounselling.Data.Services
             db.SaveChanges();
         }
 
-        public IEnumerable<SelectListItem> ClientList()
-        {
-            throw new NotImplementedException();
-        }
 
         public void Delete(int id)
         {

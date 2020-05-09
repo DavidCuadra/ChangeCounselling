@@ -18,6 +18,7 @@ namespace ChangeCounselling.Data.Services
         public DbSet<Book> Books { get; set; }
 
         public DbSet<Bill> Bills { get; set; }
+        public DbSet<Login> Logins { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
