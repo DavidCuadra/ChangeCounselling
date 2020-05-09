@@ -5,6 +5,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace ChangeCounselling.Data.Models
 {
@@ -21,6 +22,10 @@ namespace ChangeCounselling.Data.Models
 
         [Required]
         public int ClientID { get; set; }
+        public IEnumerable<SelectListItem> ClientList { get; set; }
+        //public  void ClientList();
+
+
         [Required]
         public int CounsellorID { get; set; }
 

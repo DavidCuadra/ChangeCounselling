@@ -4,14 +4,17 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace ChangeCounselling.Data.Services
 {
     public interface IClientData
     {
             IEnumerable<Client> GetAll();
+        IEnumerable<SelectListItem> ClientList();
+        string Clients { get; set; }
 
-            Client Get(int id);
+        Client Get(int id);
             void Add(Client client);
             void Update(Client client);
             void Delete(int id);

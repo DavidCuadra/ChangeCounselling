@@ -32,6 +32,10 @@ namespace ChangeCounselling.Web
               .As<IBookData>()
               .InstancePerRequest();
 
+            builder.RegisterType<SqlBillData>()
+              .As<IBillData>()
+              .InstancePerRequest();
+
 
             builder.RegisterType<CounsellorDbContext>().InstancePerRequest();
     

@@ -4,6 +4,7 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace ChangeCounselling.Data.Models
 {
@@ -16,6 +17,7 @@ namespace ChangeCounselling.Data.Models
         [MaxLength(50)]
         [Display(Name = "First Name")]
         public string ClientFirstName { get; set; }
+        public IEnumerable<SelectListItem> ClientList { get; set; }
 
         [Required]
         [MinLength(1)]
@@ -50,6 +52,9 @@ namespace ChangeCounselling.Data.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
+
+
+   
         public string ClientEmail { get; set; }
 
         public virtual ICollection<Book> Books { get; set; }

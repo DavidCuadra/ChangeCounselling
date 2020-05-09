@@ -5,6 +5,7 @@ using System.Data.Entity;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 
 namespace ChangeCounselling.Data.Services
 {
@@ -17,10 +18,17 @@ namespace ChangeCounselling.Data.Services
             this.db = db;
         }
 
+        public string Clients { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public void Add(Client client)
         {
             db.Clients.Add(client);
             db.SaveChanges();
+        }
+
+        public IEnumerable<SelectListItem> ClientList()
+        {
+            throw new NotImplementedException();
         }
 
         public void Delete(int id)

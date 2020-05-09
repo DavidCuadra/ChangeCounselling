@@ -18,16 +18,16 @@ namespace ChangeCounselling.Data.Services
         public DbSet<Book> Books { get; set; }
 
         public DbSet<Bill> Bills { get; set; }
-        //protected override void OnModelCreating(DbModelBuilder dbModelBuilder)
-        //{
-        //    dbModelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
-        //}
-        //protected override void OnModelCreating(DbModelBuilder modelBuilder)
-        //{
-        //    base.OnModelCreating(modelBuilder);
 
-        //    modelBuilder.HasDefaultSchema(String.Empty);
-        //}
+        protected override void OnModelCreating(DbModelBuilder modelBuilder)
+        {
+            //evita la pluralizacion para las tablas.
+            modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
+            //evitar la eliminacion en cascada
+            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+
+            base.OnModelCreating(modelBuilder);
+        }
 
     }
 

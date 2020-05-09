@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Web.Mvc;
 using ChangeCounselling.Data.Models;
 
 namespace ChangeCounselling.Data.Services
@@ -10,6 +11,9 @@ namespace ChangeCounselling.Data.Services
     public class InMemoryClientData : IClientData
     {
         List<Client> clients;
+
+        public string Clients { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+
         public InMemoryClientData()
         {
             //clients = new List<Client>()
@@ -59,6 +63,10 @@ namespace ChangeCounselling.Data.Services
                 clients.Remove(client);
             }
         }
-        
+
+        public IEnumerable<SelectListItem> ClientList()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

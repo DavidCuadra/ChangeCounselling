@@ -8,7 +8,7 @@ using ChangeCounselling.Data.Models;
 
 namespace ChangeCounselling.Data.Services
 {
-    class SqlBillData: IBillData
+    public class SqlBillData: IBillData
     {
         private readonly CounsellorDbContext db;
 

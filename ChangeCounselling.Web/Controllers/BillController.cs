@@ -14,7 +14,6 @@ namespace ChangeCounselling.Web.Controllers
 
         public BillController(IBillData db)
         {
-            string fff = "change";
             this.db = db;
         }
 

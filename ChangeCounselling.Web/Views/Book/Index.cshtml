@@ -1,7 +1,51 @@
-﻿
+﻿@model IEnumerable<ChangeCounselling.Data.Models.Book>
+
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
 
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Client.ClientFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Counsellor.CouncellorFirstName)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DateTime)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Booked)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Client.ClientFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Counsellor.CouncellorFirstName)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DateTime)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Booked)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.BookID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.BookID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.BookID })
+        </td>
+    </tr>
+}
+
+</table>
