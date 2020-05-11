@@ -42,6 +42,14 @@ namespace ChangeCounselling.Data.Services
                    orderby b.BookID
                    select b;
         }
+        public IEnumerable<Book> GetAllWithClientCounsellor()
+        {
+            var result = db.Books
+                .Include(p => p.Client)
+                .Include(p => p.Counsellor)
+                .ToList();
+            return result;
+        }
 
         public void Update(Book book)
         {

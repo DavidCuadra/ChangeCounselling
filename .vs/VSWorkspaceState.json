@@ -7,6 +7,6 @@
     "\\ChangeCounselling.Web\\Views",
     "\\ChangeCounselling.Web\\Views\\Book"
   ],
-  "SelectedNode": "\\ChangeCounselling.Web\\Views\\Book\\Create.cshtml",
+  "SelectedNode": "\\ChangeCounselling.Data\\Models\\DatepickerModel.cs",
   "PreviewInSolutionExplorer": false
 }

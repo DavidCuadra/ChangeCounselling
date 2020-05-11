@@ -39,9 +39,7 @@ namespace ChangeCounselling.Data.Services
 
         public IEnumerable<Bill> GetAll()
         {
-            return from b in db.Bills
-                   orderby b.BillID
-                   select b;
+            return db.Bills.ToList();
         }
 
         public void Update(Bill bill)

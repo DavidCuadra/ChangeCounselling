@@ -10,6 +10,7 @@ namespace ChangeCounselling.Data.Services
     public interface IBookData
     {
         IEnumerable<Book> GetAll();
+        IEnumerable<Book> GetAllWithClientCounsellor();
 
         Book Get(int id);
         void Add(Book book);

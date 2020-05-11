@@ -20,9 +20,6 @@
         <th>
             @Html.DisplayNameFor(model => model.DateTime)
         </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Booked)
-        </th>
         <th></th>
     </tr>
 
@@ -37,13 +34,12 @@
         <td>
             @Html.DisplayFor(modelItem => item.DateTime)
         </td>
+
         <td>
-            @Html.DisplayFor(modelItem => item.Booked)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.BookID }) |
-            @Html.ActionLink("Details", "Details", new { id=item.BookID }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.BookID })
+            @Html.ActionLink("Edit", "Edit", new { id = item.BookID }) |
+            @Html.ActionLink("Create Bill", "CreateBill", new { id = item.BookID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.BookID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.BookID })
         </td>
     </tr>
 }

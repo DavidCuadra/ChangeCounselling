@@ -11,10 +11,16 @@ namespace ChangeCounselling.Web.Controllers
     public class BookController : Controller
     {
         private readonly IBookData db;
+        private readonly IClientData dbClient;
+        private readonly ICounsellorData dbCounsellor;
+        private readonly IBillData dbBill;
 
-        public BookController (IBookData db)
+        public BookController (IBookData db,IClientData dbClient,ICounsellorData dbCounsellor, IBillData dbBill)
         {
             this.db = db;
+            this.dbClient = dbClient;
+            this.dbCounsellor = dbCounsellor;
+            this.dbBill = dbBill;
         }
 
         // GET: Book
@@ -51,6 +57,23 @@ namespace ChangeCounselling.Web.Controllers
             return View();
         }
 
+        public ActionResult CreateBill(int id)
+        {
+            var book = this.db.Get(id);
+            Bill bill = new Bill()
+            {
+                DateTime = DateTime.Now,
+                BookID = id,
+                ClientEmail = dbClient.Get(book.ClientID).ClientEmail,
+                CounsellorEmail = dbCounsellor.Get(book.CounsellorID).CouncellorEmail
+            };
+            dbBill.Add(bill);
+
+            return RedirectToAction("Index", "Bill");
+        }
+
+
+
         // POST: Book/Create
         [HttpPost]
         [ValidateAntiForgeryToken]
@@ -69,13 +92,27 @@ namespace ChangeCounselling.Web.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
-            var model = db.Get(id);
+            var db = new SqlClientData(new CounsellorDbContext());
+            var result = db.GetAll().ToList();
+
+            var db1 = new SqlCounsellorData(new CounsellorDbContext());
+            var result1 = db1.GetAll().ToList();
+
+            ViewBag.data = result;
+            ViewBag.data1 = result1;
+      
+
+            var model =this.db.Get(id);
             if(model == null)
             {
                 return View("NotFound");
             }
             return View(model);
         }
+
+
+
+
 
         // POST: Book/Edit/5
         [HttpPost]

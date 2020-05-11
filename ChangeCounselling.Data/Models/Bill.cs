@@ -14,6 +14,7 @@ namespace ChangeCounselling.Data.Models
         public int BillID { get; set; }
 
         [Required]
+        //Data from book
         public DateTime DateTime { get; set; }
 
         [Required]

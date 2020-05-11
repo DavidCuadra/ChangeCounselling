@@ -11,10 +11,17 @@ namespace ChangeCounselling.Web.Controllers
     public class BillController : Controller
     {
         private readonly IBillData db;
+        private readonly IBookData dbBook;
+        private readonly IClientData dbClient;
+        private readonly ICounsellorData dbCounsellor;
 
-        public BillController(IBillData db)
+        public BillController(IBillData db, IClientData dbClient, ICounsellorData dbCounsellor,IBookData dbBook)
         {
             this.db = db;
+            this.dbClient = dbClient;
+            this.dbCounsellor = dbCounsellor;
+            this.dbBook = dbBook;
+          
 
         }
 
@@ -23,6 +30,7 @@ namespace ChangeCounselling.Web.Controllers
         public ActionResult Index()
         {
             var model = db.GetAll();
+
             return View(model);
                
         }
@@ -42,10 +50,7 @@ namespace ChangeCounselling.Web.Controllers
         // GET: Bill/Create
         public ActionResult Create()
         {
-            var db = new SqlBookData(new CounsellorDbContext());
-            var result = db.GetAll().ToList();
-
-            ViewBag.data = result;
+     
             return View();
         }
 
@@ -66,6 +71,11 @@ namespace ChangeCounselling.Web.Controllers
         [HttpGet]
         public ActionResult Edit(int id)
         {
+            var dbBook = new SqlBookData(new CounsellorDbContext());
+            var result = dbBook.GetAll().ToList();
+
+            ViewBag.data = result;
+
             var model = db.Get(id);
             if (model == null)
             {
@@ -81,13 +91,19 @@ namespace ChangeCounselling.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Edit(int id, Bill bill)
         {
-            if (ModelState.IsValid)
-            {
+
+            var book = this.dbBook.Get(bill.BookID);
+
+
+
+            bill.DateTime = DateTime.Now;
+            bill.ClientEmail = dbClient.Get(book.ClientID).ClientEmail;
+            bill.CounsellorEmail = dbCounsellor.Get(book.CounsellorID).CouncellorEmail;
+            
                 db.Update(bill);
                 TempData["Message"] = "You have succesfully saved the Bill!";
                 return RedirectToAction("Details", new { id = bill.BillID });
-            }
-            return View(bill);
+  
         }
 
         // GET: Bill/Delete/5
