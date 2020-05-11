@@ -36,10 +36,6 @@ namespace ChangeCounselling.Web
               .As<IBillData>()
               .InstancePerRequest();
 
-            builder.RegisterType<SqlLoginData>()
-              .As<ILoginData>()
-              .InstancePerRequest();
-
 
             builder.RegisterType<CounsellorDbContext>().InstancePerRequest();
     

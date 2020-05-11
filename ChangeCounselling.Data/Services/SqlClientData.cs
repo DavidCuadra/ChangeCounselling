@@ -34,14 +34,6 @@ namespace ChangeCounselling.Data.Services
             db.SaveChanges();
         }
 
-        //public bool Login(string user, string passwd)
-        //{
-        //    var result = db.Clients.FirstOrDefault(t => t.ClientEmail == user && t.ClientPhone == passwd);
-        //    if (result != null)
-        //        return true;
-        //    return false;
-        //}
-
 
         public Client Get(int id)
         {

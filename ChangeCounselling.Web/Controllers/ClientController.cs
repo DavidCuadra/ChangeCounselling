@@ -34,14 +34,14 @@ namespace ChangeCounselling.Web.Controllers
             var model = db.Get(id);
                 if(model == null)
             {
-                return View("NotFound");
+                return HttpNotFound();
             }
             return View(model);
         }
 
         public ActionResult Create()
         {
-                       return View();
+            return View();
         }
 
         [HttpPost]

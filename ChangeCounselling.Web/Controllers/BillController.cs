@@ -42,6 +42,10 @@ namespace ChangeCounselling.Web.Controllers
         // GET: Bill/Create
         public ActionResult Create()
         {
+            var db = new SqlBookData(new CounsellorDbContext());
+            var result = db.GetAll().ToList();
+
+            ViewBag.data = result;
             return View();
         }
 

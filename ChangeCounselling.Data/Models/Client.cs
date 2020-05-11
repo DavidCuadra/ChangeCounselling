@@ -52,9 +52,6 @@ namespace ChangeCounselling.Data.Models
         [Required]
         [EmailAddress]
         [Display(Name = "Email")]
-
-
-   
         public string ClientEmail { get; set; }
 
         public virtual ICollection<Book> Books { get; set; }

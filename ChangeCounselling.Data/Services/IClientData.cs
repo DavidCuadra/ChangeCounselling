@@ -12,8 +12,7 @@ namespace ChangeCounselling.Data.Services
     {
             IEnumerable<Client> GetAll();
 
-
-         Client Get(int id);
+            Client Get(int id);
             void Add(Client client);
             void Update(Client client);
             void Delete(int id);

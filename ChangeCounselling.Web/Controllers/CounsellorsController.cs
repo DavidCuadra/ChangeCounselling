@@ -61,8 +61,6 @@ namespace ChangeCounselling.Web.Controllers
         public ActionResult Edit(int id)
         {
 
-           // return RedirectToAction("Auth", "Login");
-
             var model = db.Get(id);
             if(model == null)
             {

@@ -13,6 +13,7 @@ namespace ChangeCounselling.Data.Models
     {
         [Key]
         public int BookID { get; set; }
+        public IEnumerable<SelectListItem> BookList { get; set; }
 
         [Required]
         public DateTime DateTime { get; set; }

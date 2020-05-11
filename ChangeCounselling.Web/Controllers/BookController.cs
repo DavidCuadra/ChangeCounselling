@@ -42,7 +42,12 @@ namespace ChangeCounselling.Web.Controllers
         {
             var db = new SqlClientData(new CounsellorDbContext());
             var result = db.GetAll().ToList();
+
+            var db1 = new SqlCounsellorData(new CounsellorDbContext());
+            var result1 = db1.GetAll().ToList();
+
             ViewBag.data = result;
+            ViewBag.data1 = result1;
             return View();
         }
 

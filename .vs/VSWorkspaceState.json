@@ -3,8 +3,10 @@
     "",
     "\\ChangeCounselling.Data",
     "\\ChangeCounselling.Data\\Models",
-    "\\ChangeCounselling.Web"
+    "\\ChangeCounselling.Web",
+    "\\ChangeCounselling.Web\\Views",
+    "\\ChangeCounselling.Web\\Views\\Book"
   ],
-  "SelectedNode": "\\ChangeCounselling.Data\\Models\\Bill.cs",
+  "SelectedNode": "\\ChangeCounselling.Web\\Views\\Book\\Create.cshtml",
   "PreviewInSolutionExplorer": false
 }
