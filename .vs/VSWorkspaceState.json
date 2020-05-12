@@ -5,7 +5,8 @@
     "\\ChangeCounselling.Data\\Models",
     "\\ChangeCounselling.Web",
     "\\ChangeCounselling.Web\\Views",
-    "\\ChangeCounselling.Web\\Views\\Book"
+    "\\ChangeCounselling.Web\\Views\\Book",
+    "\\changecounsellingmvc"
   ],
   "SelectedNode": "\\ChangeCounselling.Data\\Models\\DatepickerModel.cs",
   "PreviewInSolutionExplorer": false

@@ -1,0 +1,13 @@
+﻿@model ChangeCounselling.Data.Models.Book
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <p>Booking ID</p>
+        <h3 class="panel-title">@Model.BookID</h3>
+    </div>
+    <div class="panell-body">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
+        @Html.ActionLink("Details", "Details", new { id = Model.BookID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.BookID })
+    </div>
+</div>

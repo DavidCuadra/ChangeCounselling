@@ -1,0 +1,12 @@
+﻿@model ChangeCounselling.Data.Models.Client
+
+<div class="panel panel-default">
+    <div class="panel-heading">
+        <h3 class="panel-title"> @Model.ClientFirstName @Model.ClientLastName</h3>
+    </div>
+    <div class="panell-body">
+        @Html.ActionLink("Edit", "Edit", new { id = Model.ClientID }) |
+        @Html.ActionLink("Details", "Details", new { id = Model.ClientID }) |
+        @Html.ActionLink("Delete", "Delete", new { id = Model.ClientID })
+    </div>
+</div>

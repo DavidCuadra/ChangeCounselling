@@ -1,0 +1,32 @@
+﻿@model ChangeCounselling.Data.Models.DatepickerModel
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<br />
+
+@using (Html.BeginForm())
+{
+    @Html.EditorFor(model => model.dtmDate, new { htmlAttributes = new { @class = "datepicker" } })
+}
+
+<link href="~/Content/themes/base/jquery-ui.min.css" rel="stylesheet" />
+
+@section scripts{
+
+ <script src="~/Scripts/jquery-ui-1.12.1.min.js"></script>
+    <script>
+        $(function () {
+            $(".datepicker").datepicker({
+                dateFormat: "dd/mm/yy",
+                //minDate: new (Date.now)
+                yearRange: '2020:2022',
+                showOn: "both",
+                buttonText: "Select Date"
+            });
+        });
+    </script>
+
+}

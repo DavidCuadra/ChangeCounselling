@@ -3,12 +3,96 @@
     ViewBag.Title = "Home Page";
 }
 
+<style>
+    body {
+        background-color: #d1f2eb;
+    }
+
+    .carousel-caption p {
+        font-weight: bold;
+        font-size: 40px;
+        line-height: 1;
+        color: gray;
+        height: 250px;
+        width: 100%;
+        text-shadow: 3px 2px black;
+    }
+
+    .carousel-caption h1 {
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 1;
+        color: white;
+        height: 60px;
+        text-shadow: 3px 2px black;
+    }
+
+    .carousel-caption h2 {
+        font-weight: bold;
+        font-size: 35px;
+        line-height: 1;
+        color: lightblue;
+        height: 300px;
+        width: 100%;
+        text-shadow: 3px 2px black;
+    }
+</style>
+
 <div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <div>
-        There are @Model.Count() number of restaurants in the db. 
-    </div>
+    <h1>Welcome to Change Counselling</h1>
+    <h3>
+        We have @Model.Count() Counsellors in our database.
+    </h3>
 </div>
 
 
-
+<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="1"></li>
+        <li data-target="#myCarousel" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="item active">
+            <img src="~/Content/images/Counselling1.jpg" alt="Change Counselling" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <h2>
+                    Understand your feelings and learn how to express them and recognise them.
+                    <a class="btn btn-default" href="http://localhost:50547/Home/About">
+                        Learn More
+                    </a>
+                </h2>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/Content/images/image-happy-man-3.jpg" alt="Change Counselling" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <h1>
+                    Mental health is powerful, it brings out the best in you, for yourself and others.
+                    <a class="btn btn-default" href="http://localhost:50547/Home/About">
+                        Learn More
+                    </a>
+                </h1>
+            </div>
+        </div>
+        <div class="item">
+            <img src="~/Content/images/Counselling-for-CRPS-Chronic-Pain-Help.jpg" alt="Change Counselling" class="img-responsive" />
+            <div class="carousel-caption" role="option">
+                <p>
+                    Book online sessions with us...
+                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
+                        Book
+                    </a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
