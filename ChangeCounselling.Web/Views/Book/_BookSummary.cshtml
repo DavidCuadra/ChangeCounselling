@@ -8,6 +8,7 @@
     <div class="panell-body">
         @Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |
         @Html.ActionLink("Details", "Details", new { id = Model.BookID }) |
-        @Html.ActionLink("Delete", "Delete", new { id = Model.BookID })
+        @Html.ActionLink("Delete", "Delete", new { id = Model.BookID })|
+        @Html.ActionLink("Create Bill", "CreateBill", new { id = Model.BookID })
     </div>
 </div>

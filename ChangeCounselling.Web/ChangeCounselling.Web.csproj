@@ -304,7 +304,6 @@
     <Content Include="Views\Book\Index.cshtml" />
     <Content Include="Views\Book\Edit.cshtml" />
     <Content Include="Views\Book\Delete.cshtml" />
-    <Content Include="Views\Bill\Details.cshtml" />
     <Content Include="Views\Bill\Create.cshtml" />
     <Content Include="Views\Bill\Edit.cshtml" />
     <Content Include="Views\Login\Auth.cshtml" />
@@ -314,6 +313,9 @@
     <Content Include="Views\Client\_ClientSummary.cshtml" />
     <Content Include="Views\Book\_BookSummary.cshtml" />
     <Content Include="Views\Bill\_BillSummary.cshtml" />
+    <Content Include="Views\Bill\Details.cshtml" />
+    <Content Include="Views\Book\NotFound.cshtml" />
+    <Content Include="Views\Bill\NotFound.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

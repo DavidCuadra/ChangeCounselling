@@ -65,6 +65,9 @@ namespace ChangeCounselling.Data.Services
             throw new NotImplementedException();
         }
 
-       
+        public IEnumerable<Book> GetAllWithClientCounsellor()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

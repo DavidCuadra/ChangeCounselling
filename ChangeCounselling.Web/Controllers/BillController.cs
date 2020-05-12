@@ -97,7 +97,11 @@ namespace ChangeCounselling.Web.Controllers
 
 
             bill.DateTime = DateTime.Now;
+            bill.ClientFirstName = dbClient.Get(book.ClientID).ClientFirstName;
+            bill.ClientLastName = dbClient.Get(book.ClientID).ClientLastName;
             bill.ClientEmail = dbClient.Get(book.ClientID).ClientEmail;
+            bill.CounsellorFirstName = dbCounsellor.Get(book.CounsellorID).CouncellorFirstName;
+            bill.CounsellorLastName = dbCounsellor.Get(book.CounsellorID).CouncellorLastName;
             bill.CounsellorEmail = dbCounsellor.Get(book.CounsellorID).CouncellorEmail;
             
                 db.Update(bill);

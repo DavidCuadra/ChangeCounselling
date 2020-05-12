@@ -16,9 +16,16 @@ namespace ChangeCounselling.Data.Models
         [Required]
         //Data from book
         public DateTime DateTime { get; set; }
-
+        [Required]
+        public string ClientFirstName { get; set; }
+        [Required]
+        public string ClientLastName { get; set; }
         [Required]
         public string ClientEmail { get; set; }
+        [Required]
+        public string CounsellorFirstName { get; set; }
+        [Required]
+        public string CounsellorLastName { get; set; }
 
         [Required]
         public string CounsellorEmail { get; set; }

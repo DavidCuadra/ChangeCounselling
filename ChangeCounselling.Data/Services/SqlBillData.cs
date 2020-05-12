@@ -42,6 +42,15 @@ namespace ChangeCounselling.Data.Services
             return db.Bills.ToList();
         }
 
+        public IEnumerable<Book> GetAllWithClientCounsellor()
+        {
+            var result = db.Books
+                .Include(p => p.Client)
+                .Include(p => p.Counsellor)
+                .ToList();
+            return result;
+        }
+
         public void Update(Bill bill)
         {
             var entry = db.Entry(bill);

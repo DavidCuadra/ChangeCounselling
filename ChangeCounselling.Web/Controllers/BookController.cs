@@ -64,7 +64,11 @@ namespace ChangeCounselling.Web.Controllers
             {
                 DateTime = DateTime.Now,
                 BookID = id,
+                ClientFirstName = dbClient.Get(book.ClientID).ClientFirstName,
+                ClientLastName = dbClient.Get(book.ClientID).ClientLastName,
                 ClientEmail = dbClient.Get(book.ClientID).ClientEmail,
+                CounsellorFirstName = dbCounsellor.Get(book.CounsellorID).CouncellorFirstName,
+                CounsellorLastName = dbCounsellor.Get(book.CounsellorID).CouncellorLastName,
                 CounsellorEmail = dbCounsellor.Get(book.CounsellorID).CouncellorEmail
             };
             dbBill.Add(bill);

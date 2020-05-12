@@ -18,6 +18,8 @@
             @Html.DisplayFor(model => model.Book.BookID)
         </dd>
 
+        <br />
+
         <dt>
             @Html.DisplayNameFor(model => model.DateTime)
         </dt>
@@ -26,6 +28,7 @@
             @Html.DisplayFor(model => model.DateTime)
         </dd>
 
+        <br />
 
         <dt>
             @Html.DisplayNameFor(model => model.ClientFirstName)
@@ -36,11 +39,11 @@
         </dd>
 
         <dt>
-            @Html.DisplayNameFor(model => model.CounsellorFirstName)
+            @Html.DisplayNameFor(model => model.ClientLastName)
         </dt>
 
         <dd>
-            @Html.DisplayFor(model => model.CounsellorFirstName)
+            @Html.DisplayFor(model => model.ClientLastName)
         </dd>
 
         <dt>
@@ -49,6 +52,24 @@
 
         <dd>
             @Html.DisplayFor(model => model.ClientEmail)
+        </dd>
+
+        <br />
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CounsellorFirstName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CounsellorFirstName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CounsellorLastName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CounsellorLastName)
         </dd>
 
         <dt>
@@ -62,6 +83,6 @@
     </dl>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.BillID }) |
+    @*@Html.ActionLink("Edit", "Edit", new { id = Model.BillID }) |*@
     @Html.ActionLink("Back to List", "Index")
 </p>

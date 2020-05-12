@@ -11,6 +11,8 @@ namespace ChangeCounselling.Data.Services
     {
         IEnumerable<Bill> GetAll();
 
+        IEnumerable<Book> GetAllWithClientCounsellor();
+
         Bill Get(int id);
         void Add(Bill bill);
         void Update(Bill bill);
