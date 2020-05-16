@@ -16,7 +16,7 @@ namespace ChangeCounselling.Web.Controllers
         private readonly IBillData dbBill;
 
 
-        public BookController (IBookData db,IClientData dbClient,ICounsellorData dbCounsellor, IBillData dbBill)
+        public BookController(IBookData db, IClientData dbClient, ICounsellorData dbCounsellor, IBillData dbBill)
         {
             this.db = db;
             this.dbClient = dbClient;
@@ -24,7 +24,7 @@ namespace ChangeCounselling.Web.Controllers
             this.dbBill = dbBill;
 
         }
-   
+
 
         // GET: Book
         [HttpGet]
@@ -85,13 +85,20 @@ namespace ChangeCounselling.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Book book)
         {
-            if (ModelState.IsValid)
+            var result = DateTime.Compare(book.DateTime, DateTime.Now);
+            if (result > 0 || result == 0)
             {
-                db.Add(book);
-                return RedirectToAction("Details", new { id = book.BookID} );
-            }
+                
 
-            return View();
+                if (ModelState.IsValid)
+                {
+                    db.Add(book);
+                    return RedirectToAction("Details", new { id = book.BookID });
+                }
+            }
+            else
+                TempData["Message"] = "Date is invalid";
+            return View(book);
         }
 
         // GET: Book/Edit/5
