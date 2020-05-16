@@ -1,13 +1,10 @@
 {
   "ExpandedNodes": [
-    "",
     "\\ChangeCounselling.Data",
-    "\\ChangeCounselling.Data\\Models",
-    "\\ChangeCounselling.Web",
+    "\\ChangeCounselling.Web\\Api",
     "\\ChangeCounselling.Web\\Views",
     "\\ChangeCounselling.Web\\Views\\Book",
-    "\\changecounsellingmvc"
+    "\\changecounsellingmvc\\packages"
   ],
-  "SelectedNode": "\\ChangeCounselling.Data\\Models\\DatepickerModel.cs",
   "PreviewInSolutionExplorer": false
 }
