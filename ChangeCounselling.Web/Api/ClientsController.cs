@@ -19,7 +19,27 @@ namespace ChangeCounselling.Web.Api
 
         public IEnumerable<Client> Get()
         {
-            return db.GetAll();
+            var result = db.GetAll().ToList();
+
+
+            List<Client> clients = new List<Client>();
+            foreach (var item in result)
+            {
+                clients.Add(new Client
+                {
+                    ClientID = item.ClientID,
+                    ClientFirstName = item.ClientFirstName,
+                    ClientLastName = item.ClientLastName,
+                    ClientAddressLine1 = item.ClientAddressLine1,
+                    ClientAddressLine2 = item.ClientAddressLine2,
+                    ClientAddressLine3 = item.ClientAddressLine3,
+                    ClientEmail = item.ClientEmail,
+                    ClientPhone = item.ClientPhone
+
+                });
+            }
+
+            return clients;
 
 
         }

@@ -38,9 +38,10 @@ namespace ChangeCounselling.Data.Services
 
         public IEnumerable<Book> GetAll()
         {
-            return from b in db.Books
+           return  from b in db.Books
                    orderby b.BookID
                    select b;
+
         }
         public IEnumerable<Book> GetAllWithClientCounsellor()
         {

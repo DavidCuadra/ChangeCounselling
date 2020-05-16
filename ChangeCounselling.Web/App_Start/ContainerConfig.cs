@@ -24,6 +24,8 @@ namespace ChangeCounselling.Web
                 .As<ICounsellorData>()
                 .InstancePerRequest();
 
+     
+
             builder.RegisterType<SqlClientData>()
               .As<IClientData>()
               .InstancePerRequest();

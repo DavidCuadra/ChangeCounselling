@@ -14,7 +14,6 @@ namespace ChangeCounselling.Web.Controllers
         public HomeController(ICounsellorData db)
         {
             this.db = db;
-
         }
 
         public ActionResult Index()

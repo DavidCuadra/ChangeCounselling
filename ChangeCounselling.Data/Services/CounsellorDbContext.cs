@@ -24,7 +24,7 @@ namespace ChangeCounselling.Data.Services
             //avoids pluralization for tabels.
             modelBuilder.Conventions.Remove<PluralizingTableNameConvention>();
             //avoids delete on cascade.
-            modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
+           // modelBuilder.Conventions.Remove<OneToManyCascadeDeleteConvention>();
 
             base.OnModelCreating(modelBuilder);
         }

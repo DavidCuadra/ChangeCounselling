@@ -96,4 +96,3 @@ C:\Projects_VIsualStudio\Repos\ChangeCounselling\ChangeCounselling.Data\obj\Debu
 C:\Projects_VIsualStudio\Repos\ChangeCounselling\ChangeCounselling.Data\obj\Debug\ChangeCounselling.Data.csproj.CopyComplete
 C:\Projects_VIsualStudio\Repos\ChangeCounselling\ChangeCounselling.Data\obj\Debug\ChangeCounselling.Data.dll
 C:\Projects_VIsualStudio\Repos\ChangeCounselling\ChangeCounselling.Data\obj\Debug\ChangeCounselling.Data.pdb
-C:\Projects_VIsualStudio\Repos\ChangeCounselling\ChangeCounselling.Data\obj\Debug\ChangeCounselling.Data.csprojAssemblyReference.cache

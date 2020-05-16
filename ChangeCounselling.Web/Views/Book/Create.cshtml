@@ -4,6 +4,7 @@
     ViewBag.Title = "Create";
 }  
 
+    
 
 <h2>Create a Booking</h2>
 
@@ -57,7 +58,7 @@
                 $(function () {
                     $(".datepicker").datepicker({
                         dateFormat: "dd/mm/yy",
-                        //minDate: new (Date.now)
+                        hour: null,
                         yearRange: '2020:2022',
                         showOn: "both",
                         buttonText: "Select Date"

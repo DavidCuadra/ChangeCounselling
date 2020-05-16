@@ -15,19 +15,21 @@ namespace ChangeCounselling.Web.Controllers
         private readonly ICounsellorData dbCounsellor;
         private readonly IBillData dbBill;
 
+
         public BookController (IBookData db,IClientData dbClient,ICounsellorData dbCounsellor, IBillData dbBill)
         {
             this.db = db;
             this.dbClient = dbClient;
             this.dbCounsellor = dbCounsellor;
             this.dbBill = dbBill;
+
         }
+   
 
         // GET: Book
         [HttpGet]
         public ActionResult Index()
         {
-
             var model = db.GetAll();
             return View(model);
         }

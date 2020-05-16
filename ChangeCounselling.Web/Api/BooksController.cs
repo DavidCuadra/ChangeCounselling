@@ -20,7 +20,21 @@ namespace ChangeCounselling.Web.Api
 
         public IEnumerable<Book> Get()
         {
-            return db.GetAll();
+            var result = db.GetAll().ToList();
+
+
+            List<Book> books = new List<Book>();
+            foreach(var item in result)
+            {
+                books.Add(new Book {
+                    BookID=item.BookID,
+                    CounsellorID=item.CounsellorID,
+                    ClientID=item.ClientID,
+                    DateTime=item.DateTime
+                });
+            }
+
+            return books;
 
 
         }

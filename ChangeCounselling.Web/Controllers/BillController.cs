@@ -21,8 +21,6 @@ namespace ChangeCounselling.Web.Controllers
             this.dbClient = dbClient;
             this.dbCounsellor = dbCounsellor;
             this.dbBook = dbBook;
-          
-
         }
 
 
