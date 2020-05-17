@@ -85,20 +85,20 @@ namespace ChangeCounselling.Web.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult Create(Book book)
         {
-            var result = DateTime.Compare(book.DateTime, DateTime.Now);
-            if (result > 0 || result == 0)
-            {
-                
-
                 if (ModelState.IsValid)
                 {
                     db.Add(book);
                     return RedirectToAction("Details", new { id = book.BookID });
                 }
-            }
-            else
-                TempData["Message"] = "Date is invalid";
-            return View(book);
+            var dbC = new SqlClientData(new CounsellorDbContext());
+            var result = dbC.GetAll().ToList();
+
+            var db1 = new SqlCounsellorData(new CounsellorDbContext());
+            var result1 = db1.GetAll().ToList();
+
+            ViewBag.data = result;
+            ViewBag.data1 = result1;
+            return View();
         }
 
         // GET: Book/Edit/5
@@ -138,7 +138,16 @@ namespace ChangeCounselling.Web.Controllers
                 TempData["Message"] = "You have succesfully updated your booking!";
                 return RedirectToAction("Details", new { id = book.BookID});
             }
-                return View(book);
+
+            var dbC = new SqlClientData(new CounsellorDbContext());
+            var result = dbC.GetAll().ToList();
+
+            var db1 = new SqlCounsellorData(new CounsellorDbContext());
+            var result1 = db1.GetAll().ToList();
+
+            ViewBag.data = result;
+            ViewBag.data1 = result1;
+            return View(book);
         }
 
         // GET: Book/Delete/5

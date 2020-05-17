@@ -81,7 +81,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Controllers\BillControllerTest.cs" />
+    <Compile Include="Controllers\BookControllerTest.cs" />
     <Compile Include="Controllers\ClientControllerTest.cs" />
+    <Compile Include="Controllers\CounsellorControllerTest.cs" />
     <Compile Include="Controllers\HomeControllerTest.cs" />
     <Compile Include="UnitTest1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

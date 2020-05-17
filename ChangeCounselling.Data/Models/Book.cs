@@ -1,5 +1,7 @@
-﻿using System;
+﻿using ChangeCounselling.Data.CustomValidation;
+using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -16,6 +18,9 @@ namespace ChangeCounselling.Data.Models
        // public IEnumerable<SelectListItem> BookList { get; set; }
 
         [Required]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [CustomDateValidation(ErrorMessage = "Date not Valid")]
+                
         public DateTime DateTime { get; set; }
 
 
