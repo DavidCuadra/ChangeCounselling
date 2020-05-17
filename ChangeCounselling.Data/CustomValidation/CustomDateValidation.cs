@@ -13,7 +13,7 @@ namespace ChangeCounselling.Data.CustomValidation
         {
             DateTime dateTime = Convert.ToDateTime(value);
 
-            var result = DateTime.Compare(DateTime.Now.Date, dateTime);
+            var result = DateTime.Compare(DateTime.Now, dateTime);
 
             if (result < 0 || result == 0)
             {

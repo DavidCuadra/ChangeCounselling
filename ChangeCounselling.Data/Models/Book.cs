@@ -18,16 +18,18 @@ namespace ChangeCounselling.Data.Models
        // public IEnumerable<SelectListItem> BookList { get; set; }
 
         [Required]
-        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy}", ApplyFormatInEditMode = true)]
+        [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm }", ApplyFormatInEditMode = true)]
         [CustomDateValidation(ErrorMessage = "Date not Valid")]
-                
+               
         public DateTime DateTime { get; set; }
 
 
         [Required]
+        [Range(1, int.MaxValue,ErrorMessage ="You must select a Client")]
         public int ClientID { get; set; }
 
         [Required]
+        [Range(1, int.MaxValue, ErrorMessage = "You must select a Counsellor")]
         public int CounsellorID { get; set; }
 
         public virtual Client Client { get; set; }

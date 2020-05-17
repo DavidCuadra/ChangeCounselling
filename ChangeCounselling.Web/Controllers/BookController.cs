@@ -48,6 +48,7 @@ namespace ChangeCounselling.Web.Controllers
         // GET: Book/Create
         public ActionResult Create()
         {
+            
             var db = new SqlClientData(new CounsellorDbContext());
             var result = db.GetAll().ToList();
 
@@ -61,6 +62,7 @@ namespace ChangeCounselling.Web.Controllers
 
         public ActionResult CreateBill(int id)
         {
+
             var book = this.db.Get(id);
             Bill bill = new Bill()
             {
