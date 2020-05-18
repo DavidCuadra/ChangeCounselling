@@ -2,12 +2,13 @@
 
 <div class="panel panel-default">
     <div class="panel-heading">
-        <p>Bill ID</p>
-        <h3 class="panel-title">@Model.BillID</h3>
+         <h1 class="panel-title"><p>Bill ID</p>@Model.BillID</h1>
+
+         <h5 class="panel-footer"><p>Book ID</p>@Model.BookID</h5>
     </div>
     <div class="panell-body">
-        @*@Html.ActionLink("Edit", "Edit", new { id = Model.BookID }) |*@
+        @*@Html.ActionLink("Edit", "Edit", new { id = Model.BillID }) |*@
         @Html.ActionLink("Details", "Details", new { id = Model.BillID }) |
-        @*@Html.ActionLink("Delete", "Delete", new { id = Model.BookID })*@
+        @*@Html.ActionLink("Delete", "Delete", new { id = Model.BillID })*@
     </div>
 </div>

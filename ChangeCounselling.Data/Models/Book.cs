@@ -14,10 +14,12 @@ namespace ChangeCounselling.Data.Models
     public class Book
     {
         [Key]
+        [DisplayName("Book ID")]
         public int BookID { get; set; }
-       // public IEnumerable<SelectListItem> BookList { get; set; }
+
 
         [Required]
+        [DisplayName("Session Date")]
         [DisplayFormat(DataFormatString = "{0:dd/MM/yyyy hh:mm }", ApplyFormatInEditMode = true)]
         [CustomDateValidation(ErrorMessage = "Date not Valid")]
                
