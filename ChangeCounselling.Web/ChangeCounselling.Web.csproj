@@ -186,7 +186,6 @@
     <Compile Include="Controllers\BookingController.cs" />
     <Compile Include="Controllers\ClientController.cs" />
     <Compile Include="Controllers\CounsellorsController.cs" />
-    <Compile Include="Controllers\DatepickerController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -321,9 +320,7 @@
     <Content Include="Views\Book\Delete.cshtml" />
     <Content Include="Views\Bill\Create.cshtml" />
     <Content Include="Views\Bill\Edit.cshtml" />
-    <Content Include="Views\Login\Auth.cshtml" />
     <Content Include="Views\Book\Create.cshtml" />
-    <Content Include="Views\Datepicker\Index.cshtml" />
     <Content Include="Views\Bill\Delete.cshtml" />
     <Content Include="Views\Client\_ClientSummary.cshtml" />
     <Content Include="Views\Book\_BookSummary.cshtml" />
