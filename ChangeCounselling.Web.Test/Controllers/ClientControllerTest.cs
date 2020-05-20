@@ -23,27 +23,7 @@ namespace ChangeCounselling.Web.Tests.Controllers
             // Assert
             Assert.IsNotNull(result.Model);
         }
-        [TestMethod]
-        public void Details_ModeisNull()
-        {
-            //Arrange
-            ClientController controller = new ClientController(new SqlClientData(new CounsellorDbContext()));
-            // Act
-            HttpNotFoundResult result = controller.Details(1) as HttpNotFoundResult;
-            // Assert
-            Assert.AreEqual(404, result.StatusCode);
-        }
-        //[TestMethod]
-        //public void DetailElModeloNoEsNUll()
-        //{
-        //    //Arrange
-        //    ClientController controller = new ClientController(new SqlClientData(new CounsellorDbContext()));
-        //    // Act
-        //    ViewResult result = controller.Details(1) as ViewResult;
-        //    // Assert
-        //    Assert.IsNotNull(result);
-        //    //Assert.IsNotNull(result.Model);
-        //}
+
 
     } 
 }

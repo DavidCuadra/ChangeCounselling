@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <parameters>
+  <parameter name="CounsellorDbContext-Web.config Connection String" description="CounsellorDbContext Connection String used in web.config by the application to access the database." defaultValue="Data Source=.;Initial Catalog=ChangeCounselling;Integrated Security=True" tags="SqlConnectionString">
+    <parameterEntry kind="XmlFile" scope="C:\\Projects_VIsualStudio\\Repos\\ChangeCounselling\\ChangeCounselling\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='CounsellorDbContext']/@connectionString" />
+  </parameter>
   <parameter name="ChangeCounselling.Data.Services.CounsellorDbContext-Web.config Connection String" description="ChangeCounselling.Data.Services.CounsellorDbContext Connection String used in web.config by the application to access the database." defaultValue="ChangeCounselling.Data.Services.CounsellorDbContext_ConnectionString" tags="SqlConnectionString">
     <parameterEntry kind="XmlFile" scope="C:\\Projects_VIsualStudio\\Repos\\ChangeCounselling\\ChangeCounselling\.Web\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='ChangeCounselling.Data.Services.CounsellorDbContext']/@connectionString" />
   </parameter>
